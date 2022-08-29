@@ -1,0 +1,325 @@
+@import url(https://use.fontawesome.com/releases/v6.1.1/css/all.css);
+
+:root {
+    --clr-darkblue: #273F82;
+    --clr-blue: #5375CF;
+    --clr-darksandy: #82651A;
+    --clr-sandy: #CFAB53;
+}
+
+/* HEADER */
+
+header .container {
+    height: clamp(300px, 45vh, 600px);
+    margin: 0 auto;
+    position: relative;
+    max-width: 2000px;
+}
+
+header .container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+header .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-around;
+    margin-top: 1.25rem;
+}
+
+header .menu {
+    font-size: clamp(1.25rem, 1.5vw, 2rem);
+}
+
+header .container .title {
+    position: absolute;
+    left: 8rem;
+    bottom: 5rem;
+    color: white;
+    font-size: clamp(2rem, 2.5vw, 60px);
+    width: clamp(400px, 60%, 2000px);
+}
+
+header .menu>li>a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding: 0.5rem;
+}
+
+header .menu .fa-angle-down {
+    vertical-align: middle;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: light;
+}
+
+header .menu li a:hover {
+    cursor: pointer;
+}
+
+header .menu>li>a::after,
+header .menu>li>a::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 500ms;
+}
+
+header .menu li a::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+header .menu li {
+    position: relative;
+    display: inline-block;
+}
+
+header .menu li a::before {
+    top: 0;
+    transform-origin: left;
+}
+
+header .menu li a:hover::after,
+header .menu li a:hover::before {
+    transform: scaleX(1);
+}
+
+header nav .dropdown {
+    position: absolute;
+    top: 2.2rem;
+    left: -1rem;
+    box-shadow: 0 0 10px gray;
+    background-color: rgba(239, 239, 240, 0.4);
+    border-radius: 15px;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    display: none;
+    transition: opacity 500ms ease-in-out;
+}
+
+header nav .dropdown li {
+    padding: 0.4rem;
+}
+
+header nav .dropdown li a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav .menu li:hover>ul,
+header nav .menu li:focus>ul {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+header nav .menu li ul li a:hover {
+    color: var(--clr-darkblue);
+    transition: color 200ms ease-in;
+}
+
+/* WHO AND HOW SECTION */
+
+.who-and-how {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6rem;
+    row-gap: 3rem;
+    width: 60%;
+    margin: 3rem auto;
+}
+
+.who-and-how>div {
+    width: 40%;
+    background-color: var(--clr-sandy);
+    border-radius: 1rem;
+}
+
+.who-and-how .who {
+    width: 35%;
+}
+
+.who-and-how i {
+    font-size: 13rem;
+    color: var(--clr-darkblue);
+}
+
+.who-and-how .how-icon {
+    padding: 2rem;
+}
+
+.who-and-how>div>h2 {
+    font-size: 1.75rem;
+    margin: 1rem 0 0 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.who-and-how>div>div {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+/* OUR MISSION SECTION */
+
+.mission {
+    width: 70%;
+    margin: 0 auto;
+    isolation: isolate;
+    position: relative;
+}
+
+.mission .our-mission {
+    background-image: url(../images/our-mission-darken.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 35%;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    left: 80px;
+}
+
+.mission .title {
+    font-size: 3rem;
+    color: rgb(221, 221, 221);
+    text-align: center;
+    padding: 3.5rem 0 2.5rem;
+}
+
+.mission .our-mission .divider {
+    width: 70%;
+    height: 5px;
+    margin: 2rem auto 2.5rem;
+    background-color: var(--clr-darksandy);
+    position: relative;
+}
+
+.mission .our-mission .divider::after {
+    content: '';
+    width: 90px;
+    height: 90px;
+    background-color: var(--clr-blue);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    position: absolute;
+    top: -3rem;
+    left: 5.5rem;
+}
+
+.mission .our-mission .text {
+    color: rgb(221, 221, 221);
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mission .our-priorities {
+    display: inline-block;
+    border: 5px solid var(--clr-blue);
+    padding: 0 3rem 13rem 22rem;
+    position: relative;
+    z-index: -1;
+    top: -400px;
+    left: 150px;
+}
+
+.mission .our-priorities ul {
+    list-style-image: url(../images/mission-resized.png);
+}
+
+.mission .our-priorities .title {
+    color: black;
+    display: inline-block;
+    padding-top: 3.5rem;
+}
+
+.mission .our-priorities ul li {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+.mission .our-priorities .divider {
+    height: 4px;
+    width: 80%;
+    margin: 4rem 2rem;
+    background-color: var(--clr-darksandy);
+}
+
+.mission .our-motto {
+    width: 80%;
+    position: absolute;
+    top: 41%;
+    left: 150px;
+}
+
+.mission .our-motto .title {
+    color: black;
+}
+
+.mission .our-motto p {
+    display: inline-block;
+    width: 70%;
+    font-size: 1.5rem;
+}
+
+.mission .our-motto i {
+    font-size: 6rem;
+    margin: 0 2rem;
+}
+
+.mission .our-motto span {
+    background: linear-gradient(197deg, rgba(39, 63, 130, 1) 17%, rgba(83, 117, 207, 1) 37%, rgba(130, 101, 26, 1) 60%, rgba(207, 171, 83, 1) 83%);
+    text-transform: uppercase;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media(max-width: 830px) {
+    header .menu {
+        display: none;
+    }
+}
+
+@media(max-width: 1000px) {
+    header .menu {
+        width: 60%;
+    }
+}
