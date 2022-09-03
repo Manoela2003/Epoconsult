@@ -544,9 +544,6 @@ footer .copyright {
     padding-top: 1rem;
     text-align: center;
     font-size: clamp(1rem, 1.25vw, 1.5rem);
-    /* position: absolute;
-    bottom: 0;
-    width: 100%; */
 }
 
 /* MEDIA QUERIES */
@@ -652,11 +649,6 @@ footer .copyright {
 }
 
 @media(max-width: 1300px) {
-
-    /* footer {
-        height: 55vh;
-        min-height: 460px;
-    } */
     footer .container {
         column-gap: 4rem;
     }
