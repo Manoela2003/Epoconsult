@@ -1,0 +1,1206 @@
+@import url(https://use.fontawesome.com/releases/v6.1.1/css/all.css);
+
+:root {
+    --clr-darkblue: #273F82;
+    --clr-blue: #5375CF;
+    --clr-darksandy: #82651A;
+    --clr-sandy: #CFAB53;
+    --gradient: linear-gradient(197deg, rgba(39, 63, 130, 1) 17%, rgba(83, 117, 207, 1) 37%, rgba(130, 101, 26, 1) 60%, rgba(207, 171, 83, 1) 83%);
+}
+
+/* HEADER */
+
+header .container {
+    height: clamp(300px, 45vh, 350px);
+    margin: 0 auto;
+    position: relative;
+}
+
+header .container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+header .container .logo {
+    width: clamp(82px, 8vw, 113px);
+    height: 7em;
+    position: absolute;
+    z-index: 100;
+    object-fit: contain;
+    left: 15px;
+}
+
+header .container .triangle {
+    width: clamp(250px, 25vw, 500px);
+    height: 18em;
+    background-color: var(--clr-sandy);
+    clip-path: polygon(0 0, 0 58%, 100% 0);
+    position: absolute;
+    z-index: 99;
+}
+
+header .menu-burger,
+header .checkbox {
+    display: none;
+}
+
+header .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    min-width: 550px;
+    justify-content: space-around;
+    margin-top: 1.25rem;
+    font-size: clamp(1.15rem, 1.5vw, 2rem);
+
+}
+
+header .container .title {
+    position: absolute;
+    left: 8rem;
+    bottom: 3rem;
+    color: white;
+    font-size: clamp(1.30rem, 2.5vw, 50px);
+    width: clamp(200px, 60%, 2000px);
+}
+
+header .menu>li>a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding: 0.5rem;
+}
+
+header .menu .fa-angle-down {
+    vertical-align: middle;
+    color: white;
+    font-size: 1em;
+    font-weight: light;
+}
+
+header .menu li a:hover {
+    cursor: pointer;
+}
+
+header .menu>li>a::after,
+header .menu>li>a::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 500ms;
+}
+
+header .menu li a::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+header .menu li {
+    position: relative;
+    display: inline-block;
+}
+
+header .menu li a::before {
+    top: 0;
+    transform-origin: left;
+}
+
+header .menu li a:hover::after,
+header .menu li a:hover::before {
+    transform: scaleX(1);
+}
+
+header nav .dropdown {
+    position: absolute;
+    top: 2.2rem;
+    left: -1rem;
+    box-shadow: 0 0 10px gray;
+    background-color: rgba(239, 239, 240, 0.4);
+    border-radius: 15px;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    display: none;
+    transition: opacity 500ms ease-in-out;
+}
+
+header nav .dropdown li {
+    padding: 0.4rem;
+}
+
+header nav .dropdown li a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav .menu li:hover>ul,
+header nav .menu li:focus>ul {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+header nav .menu li ul li a:hover {
+    color: var(--clr-darkblue);
+    transition: color 200ms ease-in;
+}
+
+header .menu .about-us::after,
+header .menu .about-us::before {
+    transform: scaleX(1);
+}
+
+/* WHO AND HOW SECTION */
+
+.who-and-how {
+    max-width: 1000px;
+    width: clamp(270px, 80vw, 1000px);
+    margin: 6rem auto 9.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 3rem;
+    row-gap: 3rem;
+}
+
+.who-and-how>div {
+    width: 45%;
+    background-color: var(--clr-sandy);
+    border-radius: 1rem;
+}
+
+.who-and-how i {
+    font-size: 13rem;
+    color: var(--clr-darkblue);
+}
+
+.who-and-how>div>h2 {
+    font-size: clamp(1.25rem, 1.5vw, 2rem);
+    margin: 1rem 0 0 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.who-and-how>div>div {
+    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    line-height: 1.25;
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+/* OUR MISSION SECTION */
+
+.mission {
+    width: 850px;
+    margin: 0 auto;
+    isolation: isolate;
+    position: relative;
+}
+
+.mission .our-mission {
+    background-image: url(../images/our-mission-darken.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 45%;
+    max-width: 375px;
+    position: absolute;
+    margin-top: -75px;
+    margin-left: -70px;
+}
+
+.mission .our-mission .title {
+    font-size: clamp(2rem, 2.25vw, 3rem);
+    color: rgb(221, 221, 221);
+    text-align: center;
+    padding: 3.5rem 0 2.5rem;
+}
+
+.mission .our-mission .divider {
+    width: 70%;
+    height: 5px;
+    margin: 2rem auto 2.5rem;
+    background-color: var(--clr-darksandy);
+    position: relative;
+}
+
+.mission .our-mission .divider::after {
+    content: '';
+    width: 90px;
+    height: 90px;
+    background-color: var(--clr-blue);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mission .our-mission .text {
+    color: rgb(221, 221, 221);
+    padding: 1.5rem 2rem 2rem;
+    font-size: clamp(1.15rem, 1.3vw, 1.5rem);
+}
+
+.mission .our-priorities {
+    border: 5px solid var(--clr-blue);
+}
+
+.mission .our-priorities ul {
+    list-style: none;
+    float: right;
+    clear: both;
+    margin-right: 3rem;
+}
+
+.mission .our-priorities>.title {
+    color: black;
+    padding-top: 3.5rem;
+    text-align: end;
+    margin-right: 4rem;
+    font-size: clamp(2rem, 2.25vw, 3rem);
+    padding: 3.5rem 0 2.5rem;
+}
+
+.mission .our-priorities ul li {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.15rem, 1.3vw, 1.5rem);
+}
+
+.mission .our-priorities li::before {
+    content: url(/images/mission-resized.png);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.25rem;
+}
+
+.mission .our-priorities .divider {
+    height: 4px;
+    width: 36%;
+    background-color: var(--clr-darksandy);
+    position: absolute;
+    top: 58%;
+    right: 14%;
+}
+
+.mission .our-motto {
+    width: 100%;
+    margin: 17rem auto 2rem;
+}
+
+.mission .our-motto .title {
+    color: black;
+    font-size: clamp(2rem, 2.25vw, 3rem);
+    text-align: center;
+    padding: 3.5rem 0 2.5rem;
+}
+
+.mission .our-motto p {
+    display: inline-block;
+    width: 70%;
+    font-size: clamp(1.15rem, 1.3vw, 1.5rem);
+}
+
+.mission .our-motto i {
+    font-size: clamp(4.5rem, 5vw, 6rem);
+    margin: 0 2rem 0 4rem;
+    color: var(--clr-sandy);
+}
+
+.mission .our-motto span {
+    background: var(--gradient);
+    text-transform: uppercase;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* TEAM SECTION */
+
+.team {
+    width: 100%;
+    height: clamp(600px, 80vh, 1000px);
+    background-color: var(--clr-blue);
+    clip-path: polygon(0 0, 100% 44%, 100% 101%, 60% 102%, 0 25%);
+    -webkit-clip-path: polygon(0 0, 100% 44%, 100% 101%, 60% 102%, 0 25%);
+    position: relative;
+}
+
+.team .grid-container {
+    width: clamp(320px, 90%, 3000px);
+    height: clamp(600px, 80vh, 1000px);
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.team .title {
+    align-self: flex-start;
+    font-size: clamp(2rem, 2.25vw, 3rem);
+    grid-column: 2 / span 2;
+    grid-row: 3;
+}
+
+.team .divider {
+    align-self: flex-end;
+    height: 4px;
+    background-color: var(--clr-sandy);
+    grid-column: 3 / span 2;
+    grid-row: 3;
+}
+
+.team .text {
+    font-size: clamp(1.25rem, 1.3vw, 1.75rem);
+    color: rgb(208, 208, 208);
+    grid-column: 5 / span 2;
+    grid-row: 4 / span 2;
+    align-self: center;
+    text-align: center;
+}
+
+.team .contact-us {
+    background-image: var(--gradient);
+    font-size: clamp(1.25rem, 1.3vw, 1.75rem);
+    border: 2px solid black;
+    padding: clamp(1rem, 1.25vw, 2.5rem);
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    grid-column: 7;
+    grid-row: 6;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    -webkit-box-shadow: 11px 13px 35px -3px rgba(0, 0, 0, 0.69);
+    -moz-box-shadow: 11px 13px 35px -3px rgba(0, 0, 0, 0.69);
+    box-shadow: 11px 13px 35px -3px rgba(0, 0, 0, 0.69);
+    background-size: 350%;
+    background-position: left;
+    transition: 700ms background-position ease-in-out, 500ms color ease-in-out;
+}
+
+.team .contact-us:hover,
+.team .contact-us:focus {
+    background-position: right;
+    color: white;
+}
+
+/* FOOTER */
+
+footer {
+    height: min-content;
+    background-color: #273F82;
+    position: relative;
+}
+
+footer .container {
+    width: clamp(320px, 90%, 2500px);
+    margin: 0 auto;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+}
+
+footer .block {
+    display: inline-block;
+    width: 30%;
+}
+
+footer .card {
+    width: 70%;
+    display: inline-block;
+    background-color: var(--clr-darksandy);
+    position: relative;
+    top: -3rem;
+    left: 7rem;
+    -webkit-box-shadow: -2px 8px 58px 19px rgba(99, 99, 99, 1);
+    -moz-box-shadow: -2px 8px 58px 19px rgba(99, 99, 99, 1);
+    box-shadow: -2px 8px 58px 19px rgba(99, 99, 99, 1);
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer .card .logo {
+    width: clamp(3.5rem, 4.5vw, 9rem);
+    height: clamp(3.5rem, 4.5vw, 9rem);
+    object-fit: contain;
+    margin: 1rem 3rem;
+}
+
+footer .card .divider {
+    width: clamp(100px, 5vw, 600px);
+    height: 3px;
+    background-color: var(--clr-darkblue);
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+}
+
+footer .card p {
+    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    margin-bottom: 1rem;
+    padding-left: 3rem;
+    color: rgb(226, 226, 226);
+}
+
+footer .card i {
+    font-size: 2rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    color: var(--clr-darkblue);
+}
+
+footer .sitemap {
+    width: 60%;
+    /* position: absolute;
+    top: 20%;
+    left: 30%; */
+}
+
+footer .sitemap .title {
+    font-size: clamp(1.25rem, 1.75vw, 2.25rem);
+    color: white;
+    position: relative;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+footer .sitemap .title::before {
+    content: '';
+    width: 50%;
+    height: 3px;
+    background-color: var(--clr-sandy);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+footer .sitemap .links {
+    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .sitemap .first-col {
+    width: 39%;
+}
+
+footer .sitemap .second-col {
+    width: 17%;
+    align-self: center;
+}
+
+footer .sitemap a {
+    text-decoration: none;
+    color: rgb(165, 165, 165);
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+footer .sitemap a:hover {
+    color: white;
+    margin-left: 1.25rem;
+}
+
+footer .sitemap .facebook:hover {
+    margin-left: 0;
+}
+
+footer .sitemap li {
+    margin-top: 1rem;
+    font-size: clamp(1.25rem, 1.3vw, 1.75rem);
+}
+
+footer .sitemap li ul {
+    margin-left: 1.5rem;
+}
+
+footer .sitemap i {
+    color: var(--clr-sandy);
+    margin-right: 0.75rem;
+}
+
+footer .copyright {
+    margin-top: 2rem;
+    padding-bottom: 0.25rem;
+    border-top: 2px solid var(--clr-blue);
+    padding-top: 1rem;
+    text-align: center;
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width: 3000px) {
+    footer {
+        height: max-content;
+        min-height: 300px;
+    }
+}
+
+@media(max-width: 2000px) {
+    footer .sitemap {
+        width: 65%;
+    }
+}
+
+@media(max-width: 1700px) {
+    .mission .our-mission {
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+
+    .mission .our-mission .divider::after {
+        width: 80px;
+        height: 80px;
+        top: -2.5rem;
+    }
+
+    footer .card .logo {
+        margin-right: 2rem;
+    }
+
+    footer .sitemap {
+        left: 35%;
+    }
+}
+
+@media(max-width: 1600px) {
+    .mission {
+        width: 700px;
+    }
+
+    .mission .our-mission {
+        margin-top: -50px;
+        margin-left: -80px;
+    }
+
+    .mission .our-priorities .divider {
+        top: 59%;
+        right: 19%;
+    }
+
+    .mission .our-motto .title {
+        padding-top: 1.5rem;
+    }
+
+    footer .container {
+        width: 100%;
+    }
+
+    footer .sitemap {
+        left: 32%;
+    }
+}
+
+@media (max-width: 1450px) {
+    .mission .our-motto .title {
+        padding-top: 0;
+    }
+
+    .mission .our-priorities .divider {
+        top: 62%;
+    }
+
+    .team .title {
+        grid-row: 2;
+        align-self: center;
+    }
+
+    .team .divider {
+        align-self: center;
+    }
+
+    .team .contact-us {
+        grid-column: 7 / span 2;
+        justify-self: start;
+    }
+
+    footer .card {
+        left: 3rem;
+    }
+}
+
+@media(max-width: 1350px) {
+    footer .sitemap .third-col {
+        width: 30%;
+    }
+
+    footer .sitemap .second-col {
+        width: 25%;
+    }
+}
+
+@media(max-width: 1300px) {
+    footer .container {
+        column-gap: 4rem;
+    }
+
+    footer .sitemap .links {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 390px;
+        row-gap: 0;
+    }
+
+    footer .card {
+        left: 7rem;
+        top: -5rem;
+    }
+
+    footer .sitemap .first-col {
+        width: 45%;
+        margin-top: 1rem;
+    }
+
+    footer .sitemap .second-col {
+        align-self: flex-start;
+    }
+}
+
+@media(max-width: 1200px) {
+    footer .card {
+        left: 4rem;
+        width: 80%;
+    }
+
+    footer .card p {
+        padding-left: 1.5rem;
+    }
+
+    footer .card .divider {
+        width: clamp(50px, 7vw, 600px);
+    }
+
+    footer .card .logo {
+        margin-left: 1.5rem;
+    }
+
+    footer .sitemap .third-col {
+        width: 35%;
+    }
+
+    footer .sitemap .first-col {
+        width: 60%;
+    }
+}
+
+@media(max-width: 1100px) {
+    .who-and-how i {
+        font-size: 11em;
+    }
+
+    .team {
+        top: 0;
+    }
+
+    .team .contact-us {
+        justify-self: center;
+    }
+
+    .team .title {
+        grid-column: 1 / span 2;
+    }
+
+    .team .text {
+        grid-column: 4 / span 4;
+    }
+}
+
+@media(max-width: 1000px) {
+    .team {
+        height: clamp(600px, 85vh, 1000px);
+    }
+
+    .team .title {
+        grid-column: 1 / span 3;
+    }
+
+    .team .contact-us {
+        align-self: flex-end;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .card p {
+        padding-right: 1rem;
+        text-align: center;
+    }
+
+    footer .block {
+        width: 100%;
+    }
+
+    footer .card {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        top: -3rem;
+    }
+
+    footer .card .divider {
+        width: clamp(100px, 50vw, 600px);
+    }
+
+    footer .sitemap {
+        width: 95%;
+    }
+
+    footer .sitemap .links {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: min-content;
+    }
+
+    footer .sitemap .first-col {
+        width: 45%;
+    }
+}
+
+@media(max-width: 870px) {
+    .who-and-how {
+        margin: 3.5rem auto;
+    }
+
+    .mission {
+        width: 100%;
+    }
+
+    .mission .our-mission {
+        position: static;
+        margin: 0;
+        max-width: none;
+        width: 100%;
+        background-image: url(/images/our-mission-media-darken.png);
+    }
+
+    .mission .our-mission .text {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .mission .our-priorities {
+        width: 75%;
+        margin: 2rem auto;
+    }
+
+    .mission .our-priorities ul {
+        float: none;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .mission .our-priorities .title {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .mission .our-priorities .divider {
+        right: 30%;
+        top: 75%;
+        width: 40%;
+    }
+
+    .mission .our-motto {
+        margin: 2.5rem 0;
+    }
+
+    .mission .our-motto .title {
+        padding-top: 2rem;
+    }
+
+    .mission .our-motto i {
+        margin-left: 2.5rem;
+    }
+
+    .mission .flex-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .team {
+        height: clamp(700px, 95vh, 1000px);
+    }
+
+    .team .contact-us {
+        grid-row: 6 / span 2;
+        align-self: center;
+    }
+
+
+    footer .sitemap .links {
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        justify-content: space-evenly;
+    }
+
+    footer .sitemap .first-col {
+        width: 45%;
+    }
+
+    footer .sitemap .second-col {
+        align-self: center;
+    }
+
+    footer .sitemap .third-col {
+        text-align: center;
+        width: 70%;
+    }
+
+    footer .sitemap .third-col .title::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 780px) {
+    footer .sitemap .first-col {
+        width: 50%;
+    }
+}
+
+@media(max-width: 767px) {
+    header .menu {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: stretch;
+        top: -1.25rem;
+        min-width: unset;
+        width: 380px;
+        background-color: var(--clr-darksandy);
+        padding: 1rem 0;
+        transform: translateX(100%);
+        transition: transform 400ms ease;
+        z-index: 105;
+        border-radius: 5px;
+    }
+
+    header .menu .checkbox {
+        position: absolute;
+        right: 0.75rem;
+        top: 6.35rem;
+        width: 1.75rem;
+        height: 1.5rem;
+    }
+
+    header .menu li {
+        text-align: center;
+        font-size: 1.45rem;
+    }
+
+    header .checkbox {
+        display: block;
+        position: absolute;
+        right: 27px;
+        top: 1rem;
+        width: 35px;
+        height: 23px;
+        margin: 0;
+        cursor: pointer;
+        z-index: 107;
+        opacity: 0;
+    }
+
+    header .menu-burger {
+        display: block;
+        position: relative;
+        z-index: 106;
+    }
+
+    header .menu-burger .line {
+        height: 4px;
+        width: 30px;
+        background-color: white;
+        position: absolute;
+        z-index: 100;
+        border-radius: 1.5rem;
+        right: 30px;
+        top: 1rem;
+    }
+
+    header .menu-burger .line2 {
+        top: 1.6rem
+    }
+
+    header .menu-burger .line3 {
+        top: 2.2rem;
+    }
+
+    header .menu .dropdown {
+        all: unset;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    header nav .menu li ul li a {
+        color: rgb(223, 223, 223);
+        font-size: 1.25rem;
+    }
+    header nav .menu li ul li a:hover,
+    header nav .menu li ul li a:focus{
+        color: black;
+        transition: color 300ms ease;
+    }
+    /* header nav .menu > li:nth-child(3n + 3),
+    header nav .menu > li:last-child{
+        margin-left: 1rem;
+    } */
+    header .checkbox:checked ~ .menu{
+        transform: translateX(0);
+        transition: transform 400ms ease;
+    }
+}
+
+@media(max-width: 700px) {
+    .who-and-how {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .who-and-how>div {
+        width: 100%;
+    }
+
+    .who-and-how .who-icon {
+        order: 2;
+    }
+
+    .who-and-how .who {
+        order: 1;
+    }
+
+    .who-and-how .how {
+        order: 3;
+    }
+
+    .who-and-how .how-icon {
+        order: 4;
+    }
+
+    .who-and-how i {
+        font-size: 10rem;
+    }
+
+    .mission .our-priorities {
+        width: 85%;
+    }
+
+    .team .title {
+        text-align: center;
+    }
+
+    footer .card .divider {
+        width: clamp(100px, 40vw, 600px);
+    }
+
+    footer .sitemap .first-col {
+        width: 62%;
+    }
+
+    footer .sitemap .second-col {
+        width: 30%;
+    }
+}
+
+@media(max-width: 600px) {
+    header .container .title {
+        left: 5rem;
+    }
+
+    .mission .our-mission .text {
+        width: 100%;
+    }
+
+    .mission .our-priorities {
+        width: 97%;
+    }
+
+    .mission .our-motto .flex-container {
+        justify-content: space-evenly;
+    }
+
+    .mission .our-motto i {
+        margin: 0;
+    }
+
+    .team .title {
+        text-align: center;
+    }
+
+    .team .text {
+        grid-column: 4 / span 5;
+    }
+}
+
+@media(max-width: 570px) {
+    footer .sitemap {
+        width: 70%;
+    }
+
+    footer .sitemap .links {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+
+    footer .sitemap .second-col {
+        align-self: flex-start;
+        margin-bottom: 2rem;
+    }
+
+    footer .sitemap .first-col,
+    footer .sitemap .second-col,
+    footer .sitemap .third-col {
+        width: auto;
+        text-align: left;
+    }
+
+    footer .sitemap .third-col .title::before {
+        left: 0;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 500px) {
+    header .container .title {
+        left: 7rem;
+    }
+
+    .mission .our-mission .divider::after {
+        top: -2.25rem;
+        width: 70px;
+        height: 70px;
+    }
+
+    .who-and-how i {
+        font-size: 9rem;
+    }
+
+    .mission .our-motto {
+        margin-bottom: 1.25rem;
+    }
+
+    .mission .our-motto .title {
+        width: 90%;
+        margin: 0 auto;
+        line-height: 1.25;
+        padding-bottom: 1.5rem;
+    }
+
+    .mission .our-motto .flex-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .mission .our-priorities .divider {
+        top: 67%;
+    }
+
+    .mission .our-motto p {
+        text-align: center;
+        width: 85%;
+    }
+
+    footer .card {
+        width: 80%;
+    }
+
+    footer .card .divider {
+        width: clamp(20px, 39vw, 600px);
+    }
+
+    footer .sitemap {
+        width: 95%;
+    }
+
+    footer .copyright {
+        text-align: center;
+    }
+}
+
+@media(max-width: 415px) {
+    footer {
+        min-height: 900px;
+    }
+
+    .mission .our-priorities ul li {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .mission .our-priorities .title {
+        padding-bottom: 1.25rem;
+    }
+
+    .team .contact-us {
+        grid-column: 6 / span 3;
+    }
+}
+
+@media(max-width: 375px) {
+    header .container .title {
+        left: 5rem;
+        bottom: 2rem;
+    }
+
+    .team .contact-us {
+        grid-column: 6 / span 3;
+        padding: 0.5rem;
+    }
+
+    .team .text {
+        grid-column: 3 / span 6;
+    }
+
+    footer .card .divider {
+        display: none;
+    }
+
+    footer .card i {
+        top: 8%;
+        right: 10%;
+    }
+}
+
+@media(max-width: 315px) {
+    .mission .our-motto span {
+        font-size: 1.75rem;
+    }
+
+    .team .title {
+        grid-column: 2 / span 3;
+    }
+
+    .team .text {
+        grid-column: 4 / span 4;
+    }
+
+    .team .contact-us {
+        grid-column: 5 / span 3;
+    }
+}
