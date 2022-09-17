@@ -1,12 +1,18 @@
 @import url(https://use.fontawesome.com/releases/v6.1.1/css/all.css);
 
 :root {
+    --fontsize-title: clamp(1.6rem, 2.75vw, 3.5rem);
+    --fontsize-subtitle: clamp(1.25rem, 1.75vw, 2.5rem);
+    --fontsize-text: clamp(1.15rem, 1.25vw, 2rem);
     --clr-darkblue: #273F82;
     --clr-blue: #5375CF;
     --clr-darksandy: #82651A;
     --clr-sandy: #CFAB53;
     --clr-white: rgb(235, 235, 235);
     --gradient: linear-gradient(197deg, rgba(39, 63, 130, 1) 17%, rgba(83, 117, 207, 1) 37%, rgba(130, 101, 26, 1) 60%, rgba(207, 171, 83, 1) 83%);
+}
+body{
+    font-family: 'Jost', sans-serif;
 }
 
 /* HEADER */
@@ -58,7 +64,7 @@ header .menu {
     min-width: 550px;
     justify-content: space-around;
     margin-top: 1.25rem;
-    font-size: clamp(1.15rem, 1.5vw, 2rem);
+    font-size: clamp(1.15rem, 1.5vw, 2.5rem);
 }
 
 header .container .title {
@@ -67,7 +73,7 @@ header .container .title {
     top: 50%;
     transform: translate(-50%, -50%);
     color: var(--clr-white);
-    font-size: clamp(1.30rem, 3vw, 50px);
+    font-size: var(--fontsize-title);
 }
 
 header .menu>li>a {
@@ -209,9 +215,9 @@ header .menu .prices::before {
 
 .accordion ul li .title {
     cursor: pointer;
-    font-size: clamp(1.25rem, 1.5vw, 2rem);
+    font-size: var(--fontsize-subtitle);
     padding: 1rem;
-    font-weight: bold;
+    font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.2;
 }
@@ -223,7 +229,7 @@ header .menu .prices::before {
     opacity: 1;
     max-height: 900px;
     z-index: 2;
-    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    font-size: var(--fontsize-text);
     transition: all 0.25s ease-in-out;
     padding: 0 1rem;
 }
@@ -297,8 +303,8 @@ header .menu .prices::before {
 }
 
 .addition .text {
-    font-size: clamp(1.25rem, 1.5vw, 2rem);
-    max-width: 900px;
+    font-size: var(--fontsize-text);
+    max-width: 1100px;
     color: var(--clr-white);
     position: relative;
     top: 50%;
@@ -355,7 +361,7 @@ footer .card .divider {
 }
 
 footer .card p {
-    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    font-size: var(--fontsize-text);
     margin-bottom: 1rem;
     padding-left: 3rem;
     color: rgb(226, 226, 226);
@@ -374,7 +380,7 @@ footer .sitemap {
 }
 
 footer .sitemap .title {
-    font-size: clamp(1.25rem, 1.75vw, 2.25rem);
+    font-size: var(--fontsize-subtitle);
     color: var(--clr-white);
     position: relative;
     margin-bottom: 1rem;
@@ -392,7 +398,7 @@ footer .sitemap .title::before {
 }
 
 footer .sitemap .links {
-    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    font-size: var(--fontsize-text);
     display: flex;
     justify-content: space-between;
 }
@@ -428,7 +434,7 @@ footer .sitemap .facebook:hover {
 
 footer .sitemap li {
     margin-top: 1rem;
-    font-size: clamp(1.25rem, 1.3vw, 1.75rem);
+    font-size: var(--fontsize-text);
 }
 
 footer .sitemap li ul {
@@ -515,6 +521,12 @@ footer .copyright {
 
     footer .card {
         left: 7rem;
+    }
+    footer .card .logo{
+        margin-left: 1.5rem;
+    }
+    footer .card p{
+        padding-left: 1.5rem;
     }
 
     footer .card .divider {

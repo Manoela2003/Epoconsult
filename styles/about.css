@@ -1,12 +1,19 @@
 @import url(https://use.fontawesome.com/releases/v6.1.1/css/all.css);
 
 :root {
+    --fontsize-title: clamp(1.6rem, 2.75vw, 3.5rem);
+    --fontsize-subtitle: clamp(1.25rem, 1.75vw, 2.5rem);
+    --fontsize-text: clamp(1.15rem, 1.25vw, 2rem);
     --clr-darkblue: #273F82;
     --clr-blue: #5375CF;
     --clr-darksandy: #82651A;
     --clr-sandy: #CFAB53;
     --clr-white: rgb(235, 235, 235);
     --gradient: linear-gradient(197deg, rgba(39, 63, 130, 1) 17%, rgba(83, 117, 207, 1) 37%, rgba(130, 101, 26, 1) 60%, rgba(207, 171, 83, 1) 83%);
+}
+
+body {
+    font-family: 'Jost', sans-serif;
 }
 
 /* HEADER */
@@ -58,7 +65,7 @@ header .menu {
     min-width: 550px;
     justify-content: space-around;
     margin-top: 1.25rem;
-    font-size: clamp(1.15rem, 1.5vw, 2rem);
+    font-size: clamp(1.15rem, 1.5vw, 2.5rem);
 }
 
 header .container .title {
@@ -67,8 +74,8 @@ header .container .title {
     transform: translateX(-50%);
     bottom: 3.5rem;
     color: var(--clr-white);
-    font-size: clamp(1.30rem, 2.5vw, 50px);
-    width: clamp(200px, 65%, 1500px);
+    font-size: var(--fontsize-title);
+    width: clamp(260px, 70%, 1600px);
     text-align: center;
 }
 
@@ -165,7 +172,6 @@ header .menu .about-us::before {
 /* WHO AND HOW SECTION */
 
 .who-and-how {
-    max-width: 1000px;
     width: clamp(270px, 80vw, 1000px);
     margin: 6rem auto 9.5rem;
     display: flex;
@@ -177,7 +183,7 @@ header .menu .about-us::before {
 }
 
 .who-and-how>div {
-    width: 45%;
+    width: 48%;
     background-color: var(--clr-sandy);
     border-radius: 1rem;
 }
@@ -188,14 +194,14 @@ header .menu .about-us::before {
 }
 
 .who-and-how>div>h2 {
-    font-size: clamp(1.25rem, 1.5vw, 2rem);
+    font-size: var(--fontsize-subtitle);
     margin: 1rem 0 0 0;
     text-align: center;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .who-and-how>div>div {
-    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    font-size: var(--fontsize-text);
     line-height: 1.25;
     padding: 1.5rem;
     text-align: justify;
@@ -228,15 +234,15 @@ header .menu .about-us::before {
     background-image: url(../images/our-mission-darken.png);
     background-position: center center;
     background-repeat: no-repeat;
-    width: 45%;
-    max-width: 375px;
+    width: 55%;
+    min-height: 500px;
     position: absolute;
-    margin-top: -75px;
-    margin-left: -70px;
+    margin-top: -130px;
+    margin-left: -300px;
 }
 
 .mission .our-mission .title {
-    font-size: clamp(2rem, 2.25vw, 3rem);
+    font-size: clamp(1.75rem, 2.25vw, 3rem);
     color: rgb(221, 221, 221);
     text-align: center;
     padding: 3.5rem 0 2.5rem;
@@ -265,7 +271,7 @@ header .menu .about-us::before {
 .mission .our-mission .text {
     color: rgb(221, 221, 221);
     padding: 1.5rem 2rem 2rem;
-    font-size: clamp(1.15rem, 1.3vw, 1.5rem);
+    font-size: var(--fontsize-text);
 }
 
 .mission .our-priorities {
@@ -284,14 +290,14 @@ header .menu .about-us::before {
     padding-top: 3.5rem;
     text-align: end;
     margin-right: 4rem;
-    font-size: clamp(2rem, 2.25vw, 3rem);
+    font-size: clamp(1.75rem, 2.25vw, 3rem);
     padding: 3.5rem 0 2.5rem;
 }
 
 .mission .our-priorities ul li {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    font-size: clamp(1.15rem, 1.3vw, 1.5rem);
+    font-size: var(--fontsize-text);
 }
 
 .mission .our-priorities li::before {
@@ -306,13 +312,18 @@ header .menu .about-us::before {
     width: 36%;
     background-color: var(--clr-darksandy);
     position: absolute;
-    top: 58%;
+    top: 54%;
     right: 14%;
 }
 
 .mission .our-motto {
     width: 100%;
     margin: 17rem auto 2rem;
+}
+
+.mission .our-motto .flex-container {
+    display: flex;
+    align-items: center;
 }
 
 .mission .our-motto .title {
@@ -325,7 +336,7 @@ header .menu .about-us::before {
 .mission .our-motto p {
     display: inline-block;
     width: 70%;
-    font-size: clamp(1.15rem, 1.3vw, 1.5rem);
+    font-size: var(--fontsize-text);
 }
 
 .mission .our-motto i {
@@ -388,7 +399,7 @@ header .menu .about-us::before {
 }
 
 .team .text {
-    font-size: clamp(1.25rem, 1.3vw, 1.75rem);
+    font-size: var(--fontsize-text);
     color: rgb(224, 224, 224);
     grid-column: 5 / span 2;
     grid-row: 4 / span 2;
@@ -399,7 +410,7 @@ header .menu .about-us::before {
 .team .contact-us {
     background: rgb(39, 63, 130);
     background-image: linear-gradient(124deg, rgba(39, 63, 130, 1) 17%, rgba(83, 117, 207, 1) 37%, rgba(130, 101, 26, 1) 60%, rgba(207, 171, 83, 1) 83%);
-    font-size: clamp(1.25rem, 1.3vw, 1.75rem);
+    font-size: clamp(1.25rem, 1.5vw, 2.5rem);
     border: 2px solid black;
     padding: clamp(1rem, 1.25vw, 2.5rem);
     text-align: center;
@@ -447,7 +458,7 @@ footer .block {
 footer .card {
     width: 70%;
     display: inline-block;
-    background-color: var(--clr-sandy);
+    background-color: var(--clr-darksandy);
     position: relative;
     top: -3rem;
     left: 7rem;
@@ -472,7 +483,7 @@ footer .card .divider {
 }
 
 footer .card p {
-    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    font-size: var(--fontsize-text);
     margin-bottom: 1rem;
     padding-left: 3rem;
     color: rgb(226, 226, 226);
@@ -491,7 +502,7 @@ footer .sitemap {
 }
 
 footer .sitemap .title {
-    font-size: clamp(1.25rem, 1.75vw, 2.25rem);
+    font-size: var(--fontsize-subtitle);
     color: var(--clr-white);
     position: relative;
     margin-bottom: 1rem;
@@ -509,7 +520,7 @@ footer .sitemap .title::before {
 }
 
 footer .sitemap .links {
-    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    font-size: var(--fontsize-text);
     display: flex;
     justify-content: space-between;
 }
@@ -545,7 +556,7 @@ footer .sitemap .facebook:hover {
 
 footer .sitemap li {
     margin-top: 1rem;
-    font-size: clamp(1.25rem, 1.3vw, 1.75rem);
+    font-size: var(--fontsize-text);
 }
 
 footer .sitemap li ul {
@@ -576,6 +587,21 @@ footer .copyright {
     }
 }
 
+@media(max-width: 2400px) {
+    .mission .our-mission {
+        margin-top: -90px;
+        margin-left: -250px;
+    }
+}
+
+@media(max-width: 2100px) {
+    .mission .our-mission {
+        margin-top: -30px;
+        margin-left: -200px;
+        min-height: 450px;
+    }
+}
+
 @media(max-width: 2000px) {
     footer .sitemap {
         width: 65%;
@@ -584,14 +610,22 @@ footer .copyright {
 
 @media(max-width: 1700px) {
     .mission .our-mission {
-        margin-top: -30px;
-        margin-left: -30px;
+        margin-left: -100px;
+        min-height: 400px;
+    }
+
+    .mission .our-motto .title {
+        padding-top: 0;
     }
 
     .mission .our-mission .divider::after {
         width: 80px;
         height: 80px;
         top: -2.5rem;
+    }
+
+    .mission .our-priorities .divider {
+        top: 60%;
     }
 
     footer .card .logo {
@@ -609,8 +643,7 @@ footer .copyright {
     }
 
     .mission .our-mission {
-        margin-top: -50px;
-        margin-left: -80px;
+        margin-left: -140px;
     }
 
     .mission .our-priorities .divider {
@@ -651,11 +684,6 @@ footer .copyright {
         align-self: center;
     }
 
-    .team .contact-us {
-        grid-column: 7 / span 2;
-        justify-self: start;
-    }
-
     footer .card {
         left: 3rem;
     }
@@ -692,6 +720,12 @@ footer .copyright {
         left: 7rem;
         top: -5rem;
     }
+    footer .card .logo{
+        margin-left: 1.5rem;
+    }
+    footer .card p{
+        padding-left: 1.5rem;
+    }
 
     footer .card .divider {
         width: clamp(10px, 5vw, 600px);
@@ -708,6 +742,7 @@ footer .copyright {
 }
 
 @media(max-width: 1200px) {
+
     footer .card {
         left: 4rem;
         width: 80%;
@@ -757,6 +792,11 @@ footer .copyright {
 }
 
 @media(max-width: 1000px) {
+    .mission .our-mission {
+        width: 46%;
+        left: 60px;
+    }
+
     .team {
         height: clamp(600px, 85vh, 1000px);
     }
@@ -766,6 +806,7 @@ footer .copyright {
     }
 
     .team .contact-us {
+        grid-column: 7 / span 2;
         align-self: flex-end;
     }
 
@@ -830,6 +871,7 @@ footer .copyright {
         position: static;
         margin: 0;
         max-width: none;
+        min-height: 350px;
         width: 100%;
         background-image: url(/images/our-mission-media-darken.png);
     }
@@ -917,16 +959,18 @@ footer .copyright {
         transform: translateX(-50%);
     }
 }
-
-@media (max-width: 780px) {
-    .team .title {
+@media(max-width: 800px){
+    .team .title{
         grid-column: 1 / span 4;
     }
+}
 
+@media (max-width: 780px) {
     footer .sitemap .first-col {
         width: 50%;
     }
-    footer .card .divider{
+
+    footer .card .divider {
         width: clamp(50px, 53vw, 600px);
     }
 }
@@ -991,6 +1035,7 @@ footer .copyright {
         top: 1rem;
         transition: all 350ms ease;
     }
+
     header .menu-burger .line2 {
         top: 1.6rem;
     }
@@ -1017,18 +1062,22 @@ footer .copyright {
         color: black;
         transition: color 300ms ease;
     }
-    header .checkbox:checked ~ .menu-burger .line1{
+
+    header .checkbox:checked~.menu-burger .line1 {
         top: 1.5rem;
         transform: rotate(45deg);
-    }    
-    header .checkbox:checked ~ .menu-burger .line2{
+    }
+
+    header .checkbox:checked~.menu-burger .line2 {
         opacity: 0;
         transition: opacity 300ms ease;
     }
-    header .checkbox:checked ~ .menu-burger .line3{
+
+    header .checkbox:checked~.menu-burger .line3 {
         top: 1.5rem;
         transform: rotate(-45deg);
     }
+
     header .checkbox:checked~.menu {
         opacity: 1;
     }
@@ -1113,9 +1162,13 @@ footer .copyright {
 }
 
 @media(max-width: 570px) {
-    footer .card .divider{
+    .team .contact-us{
+        grid-column: 6 / span 3;
+    }
+    footer .card .divider {
         width: clamp(50px, 45vw, 600px);
     }
+
     footer .sitemap {
         width: 70%;
     }
@@ -1145,14 +1198,16 @@ footer .copyright {
 }
 
 @media (max-width: 500px) {
-    header .menu{
+    header .menu {
         width: 100%;
         align-items: flex-start;
     }
-    header .menu li{
+
+    header .menu li {
         text-align: left;
         margin-left: 1rem;
     }
+
     .mission .our-mission .divider::after {
         top: -2.25rem;
         width: 70px;
@@ -1215,21 +1270,17 @@ footer .copyright {
         padding-bottom: 1.25rem;
     }
 
-    .team .contact-us {
-        grid-column: 6 / span 3;
-    }
-
     footer {
         min-height: 900px;
     }
-    footer .card .divider{
+
+    footer .card .divider {
         width: clamp(50px, 35vw, 600px);
     }
 }
 
 @media(max-width: 375px) {
     .team .contact-us {
-        grid-column: 6 / span 3;
         padding: 0.5rem;
     }
 
