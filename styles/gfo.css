@@ -1,12 +1,19 @@
 @import url(https://use.fontawesome.com/releases/v6.1.1/css/all.css);
 
 :root {
+    --fontsize-title: clamp(1.6rem, 2.75vw, 3.5rem);
+    --fontsize-subtitle: clamp(1.25rem, 1.75vw, 2.5rem);
+    --fontsize-text: clamp(1.15rem, 1.25vw, 2rem);
     --clr-darkblue: #273F82;
     --clr-blue: #5375CF;
     --clr-darksandy: #82651A;
     --clr-sandy: #CFAB53;
     --clr-white: rgb(235, 235, 235);
     --gradient: linear-gradient(197deg, rgba(39, 63, 130, 1) 17%, rgba(83, 117, 207, 1) 37%, rgba(130, 101, 26, 1) 60%, rgba(207, 171, 83, 1) 83%);
+}
+
+body {
+    font-family: 'Jost', sans-serif;
 }
 
 /* HEADER */
@@ -175,7 +182,7 @@ header .menu .gfo {
 }
 
 .gfo-reports .title-box .title {
-    font-size: clamp(1.25rem, 1.5vw, 2rem);
+    font-size: var(--fontsize-subtitle);
     padding: 0.75rem 0 0.75rem 0.75rem;
     text-align: center;
     width: 90%;
@@ -197,27 +204,34 @@ header .menu .gfo {
 
 .gfo-reports .flex-section .report {
     position: relative;
-    background-image: linear-gradient(90deg, transparent 50%, var(--clr-darkblue) 50%);
+    background-image: linear-gradient(90deg, transparent 35%, var(--clr-darkblue) 65%);
     background-size: 500px;
     background-repeat: no-repeat;
     background-position: 100%;
     transition: 700ms all ease;
+    border-radius: 8px;
+    -webkit-box-shadow: 6px 7px 39px -1px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 6px 7px 39px -1px rgba(0, 0, 0, 0.62);
+    box-shadow: 6px 7px 39px -1px rgba(0, 0, 0, 0.62)
 }
-.gfo-reports .flex-section .report:hover{
+
+.gfo-reports .flex-section .report:hover {
     background-position: 0%;
 }
-.gfo-reports .flex-section .report:hover a{
+
+.gfo-reports .flex-section .report:hover a {
     color: black;
     transition: color 700ms ease;
 }
 
 .gfo-reports .flex-section .report a {
     border: 3px solid var(--clr-darkblue);
+    border-radius: 8px;
     display: inline-block;
     padding: 1rem 1.75rem 1rem 6rem;
     color: var(--clr-white);
     text-decoration: none;
-    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    font-size: var(--fontsize-text);
 }
 
 .gfo-reports .flex-section .report .triangle {
@@ -226,6 +240,9 @@ header .menu .gfo {
     left: -1rem;
     background-color: var(--clr-sandy);
     clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    -webkit-box-shadow: 6px 7px 39px -1px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 6px 7px 39px -1px rgba(0, 0, 0, 0.62);
+    box-shadow: 6px 7px 39px -1px rgba(0, 0, 0, 0.62);
 }
 
 .gfo-reports .flex-section .report i {
@@ -282,7 +299,7 @@ footer .card .divider {
 }
 
 footer .card p {
-    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    font-size: var(--fontsize-text);
     margin-bottom: 1rem;
     padding-left: 3rem;
     color: rgb(226, 226, 226);
@@ -301,7 +318,7 @@ footer .sitemap {
 }
 
 footer .sitemap .title {
-    font-size: clamp(1.25rem, 1.75vw, 2.25rem);
+    font-size: var(--fontsize-subtitle);
     color: var(--clr-white);
     position: relative;
     margin-bottom: 1rem;
@@ -319,7 +336,7 @@ footer .sitemap .title::before {
 }
 
 footer .sitemap .links {
-    font-size: clamp(1.15rem, 1.25vw, 1.75rem);
+    font-size: var(--fontsize-text);
     display: flex;
     justify-content: space-between;
 }
@@ -355,7 +372,7 @@ footer .sitemap .facebook:hover {
 
 footer .sitemap li {
     margin-top: 1rem;
-    font-size: clamp(1.25rem, 1.3vw, 1.75rem);
+    font-size: var(--fontsize-text);
 }
 
 footer .sitemap li ul {
@@ -383,6 +400,18 @@ footer .copyright {
     footer {
         height: max-content;
         min-height: 300px;
+    }
+}
+@media(min-width: 2300px) and (max-width: 4100px){
+    .gfo-reports{
+        max-width: unset;
+    }
+    .gfo-reports .title-box .title {
+        width: 60%;
+        margin-left:30%;
+    }
+    .gfo-reports .flex-section{
+        height: 370px;
     }
 }
 
