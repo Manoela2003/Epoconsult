@@ -1,0 +1,383 @@
+@import url(https://use.fontawesome.com/releases/v6.1.1/css/all.css);
+
+:root {
+    --fontsize-title: clamp(1.6rem, 2.75vw, 3.5rem);
+    --fontsize-subtitle: clamp(1.25rem, 1.75vw, 2.5rem);
+    --fontsize-text: clamp(1.15rem, 1.25vw, 2rem);
+    --clr-darkblue: #273F82;
+    --clr-blue: #5375CF;
+    --clr-darksandy: #82651A;
+    --clr-sandy: #CFAB53;
+    --clr-white: rgb(235, 235, 235);
+    --gradient: linear-gradient(197deg, rgba(39, 63, 130, 1) 17%, rgba(83, 117, 207, 1) 37%, rgba(130, 101, 26, 1) 60%, rgba(207, 171, 83, 1) 83%);
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+}
+
+/* HEADER */
+
+header .container {
+    height: clamp(300px, 60vh, 450px);
+    margin: 0 auto;
+    position: relative;
+}
+
+header .container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+header .container .logo {
+    width: clamp(82px, 8vw, 113px);
+    height: 7em;
+    position: absolute;
+    z-index: 100;
+    object-fit: contain;
+    left: 15px;
+}
+
+header .container .triangle {
+    width: clamp(250px, 25vw, 500px);
+    height: 18em;
+    background-color: var(--clr-sandy);
+    clip-path: polygon(0 0, 0 58%, 100% 0);
+    position: absolute;
+    z-index: 99;
+}
+
+header .menu-burger,
+header .checkbox {
+    display: none;
+}
+
+header .menu {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    min-width: 550px;
+    justify-content: space-around;
+    margin-top: 1.25rem;
+    font-size: clamp(1.15rem, 1.5vw, 2rem);
+}
+
+header .container .title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--clr-white);
+    font-size: clamp(1.30rem, 2.5vw, 50px);
+}
+
+header .menu>li>a {
+    text-decoration: none;
+    color: var(--clr-white);
+    position: relative;
+    padding: 0.5rem;
+}
+
+header .menu .fa-angle-down {
+    vertical-align: middle;
+    color: var(--clr-white);
+    font-size: 1em;
+    font-weight: light;
+}
+
+header .menu li a:hover {
+    cursor: pointer;
+}
+
+header .menu>li>a::after,
+header .menu>li>a::before {
+    content: '';
+    position: absolute;
+    z-index: 110;
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 500ms;
+}
+
+header .menu li a::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+header .menu li {
+    position: relative;
+    display: inline-block;
+}
+
+header .menu li a::before {
+    top: 0;
+    transform-origin: left;
+}
+
+header .menu li a:hover::after,
+header .menu li a:hover::before {
+    transform: scaleX(1);
+}
+
+header nav .dropdown {
+    position: absolute;
+    top: 2rem;
+    left: -1rem;
+    z-index: 100;
+    box-shadow: 0 0 10px gray;
+    background-color: rgba(239, 239, 240, 0.4);
+    border-radius: 15px;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+header nav .dropdown li {
+    padding: 0.4rem;
+}
+
+header nav .dropdown li a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+
+header nav .menu li:hover>ul,
+header nav .menu li:focus>ul {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+header nav .menu li ul li a:hover {
+    color: var(--clr-sandy);
+    transition: color 200ms ease-in;
+}
+
+header .menu .helpful::after,
+header .menu .helpful::before {
+    transform: scaleX(1);
+}
+
+/* DIVIDER */
+
+.divider {
+    width: 146rem;
+    height: 5px;
+    background-color: var(--clr-darkblue);
+    transform: rotate(90deg);
+    transform-origin: top left;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+}
+
+/* INSTITUTIONS */
+
+.institutions {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.institutions a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.institutions .first {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    margin-left: 15rem;
+    margin-top: 8rem;
+}
+
+.institutions .second {
+    position: absolute;
+    right: 11rem;
+    top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.institutions .rectangle {
+    width: 35%;
+    height: 140px;
+    background: var(--gradient);
+    -webkit-box-shadow: 8px 10px 14px -2px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 8px 10px 14px -2px rgba(0, 0, 0, 0.63);
+    box-shadow: 8px 10px 14px -2px rgba(0, 0, 0, 0.63);
+}
+
+.institutions .second .rectangle {
+    width: 85%;
+}
+
+.institutions .rectangle img {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+}
+
+.institutions .rectangle p {
+    font-size: var(--fontsize-text);
+    text-align: center;
+    width: 60%;
+}
+
+/* FOOTER */
+
+footer {
+    height: min-content;
+    background-color: #273F82;
+    position: relative;
+}
+
+footer .container {
+    width: clamp(320px, 90%, 2500px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+footer .block {
+    display: inline-block;
+    width: 30%;
+}
+
+footer .card {
+    width: 70%;
+    display: inline-block;
+    background-color: var(--clr-darksandy);
+    position: relative;
+    top: 1rem;
+    left: 7rem;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer .card .logo {
+    width: clamp(3.5rem, 4.5vw, 9rem);
+    height: clamp(3.5rem, 4.5vw, 9rem);
+    object-fit: contain;
+    margin: 1rem 3rem;
+}
+
+footer .card .divider {
+    transform: unset;
+    width: clamp(100px, 5vw, 600px);
+    height: 3px;
+    background-color: var(--clr-darkblue);
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+}
+
+footer .card p {
+    font-size: var(--fontsize-text);
+    margin-bottom: 1rem;
+    padding-left: 3rem;
+    color: rgb(226, 226, 226);
+}
+
+footer .card i {
+    font-size: 2rem;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    color: var(--clr-darkblue);
+}
+
+footer .sitemap {
+    width: 60%;
+}
+
+footer .sitemap .title {
+    font-size: var(--fontsize-subtitle);
+    color: var(--clr-white);
+    position: relative;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+footer .sitemap .title::before {
+    content: '';
+    width: 50%;
+    height: 3px;
+    background-color: var(--clr-sandy);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+footer .sitemap .links {
+    font-size: var(--fontsize-text);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .sitemap .first-col {
+    width: 39%;
+}
+
+footer .sitemap .second-col {
+    width: 17%;
+    align-self: center;
+}
+
+footer .sitemap .third-col li {
+    color: rgb(235, 235, 235);
+}
+
+footer .sitemap a {
+    text-decoration: none;
+    color: rgb(165, 165, 165);
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+footer .sitemap a:hover {
+    color: var(--clr-white);
+    margin-left: 1.25rem;
+}
+
+footer .sitemap .facebook:hover {
+    margin-left: 0;
+}
+
+footer .sitemap li {
+    margin-top: 1rem;
+    font-size: var(--fontsize-text);
+}
+
+footer .sitemap li ul {
+    margin-left: 1.5rem;
+}
+
+footer .sitemap i {
+    color: var(--clr-sandy);
+    margin-right: 0.75rem;
+}
+
+footer .copyright {
+    margin-top: 2rem;
+    padding-bottom: 0.25rem;
+    border-top: 2px solid var(--clr-blue);
+    padding-top: 1rem;
+    text-align: center;
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
+    color: var(--clr-white);
+}

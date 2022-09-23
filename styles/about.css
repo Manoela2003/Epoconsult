@@ -276,6 +276,7 @@ header .menu .about-us::before {
 
 .mission .our-priorities {
     border: 5px solid var(--clr-blue);
+    background-color: white;
 }
 
 .mission .our-priorities ul {
@@ -492,9 +493,12 @@ footer .card p {
 footer .card i {
     font-size: 2rem;
     position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
+    top: 1rem;
+    right: 1rem;
     color: var(--clr-darkblue);
+}
+footer .card .email i{
+    right: 3.75rem;
 }
 
 footer .sitemap {
@@ -548,10 +552,6 @@ footer .sitemap a {
 footer .sitemap a:hover {
     color: var(--clr-white);
     margin-left: 1.25rem;
-}
-
-footer .sitemap .facebook:hover {
-    margin-left: 0;
 }
 
 footer .sitemap li {
@@ -1293,8 +1293,11 @@ footer .copyright {
     }
 
     footer .card i {
-        top: 8%;
+        top: 10%;
         right: 10%;
+    }
+    footer .card .email i{
+        right: 25%;
     }
 }
 
@@ -1313,5 +1316,8 @@ footer .copyright {
 
     .team .contact-us {
         grid-column: 5 / span 3;
+    }
+    footer .card .email i{
+        right: 28%;
     }
 }

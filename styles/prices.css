@@ -301,17 +301,26 @@ header .menu .prices::before {
     height: clamp(100px, 35vh, 150px);
     margin-bottom: 3rem;
 }
+.addition .flex{
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
 
 .addition .text {
     font-size: var(--fontsize-text);
-    max-width: 1100px;
     color: var(--clr-white);
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
 }
+.addition i{
+    font-size: 6rem;
+    color: var(--clr-sandy);
+}
+
 
 /* FOOTER */
 
@@ -571,9 +580,19 @@ footer .copyright {
         width: 60%;
     }
 }
+@media(max-width: 1150px){
+    .addition .flex{
+        gap: 0;
+    }
+    .addition .text{
+        width: 80%;
+    }
+    .addition i{
+        font-size: 4.5rem;
+    }
+}
 @media(max-width: 1000px){
     .addition .text{
-        width: 90%;
     }
     footer .container {
         flex-direction: column;
@@ -758,6 +777,9 @@ footer .copyright {
     }
 }
 @media(max-width: 700px){
+    .addition i{
+        display: none;
+    }
     footer .card .divider {
         width: clamp(100px, 48vw, 600px);
     }
