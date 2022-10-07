@@ -56,7 +56,7 @@ header .checkbox {
 
 header .menu {
     position: absolute;
-    top: 0;
+    top: 0.5rem;
     right: 2rem;
     z-index: 1;
     display: flex;
@@ -804,6 +804,9 @@ footer .copyright {
 }
 
 @media(max-width: 375px) {
+    .institutions .col{
+        width: 85%;
+    }
     footer .card .divider {
         display: none;
     }
