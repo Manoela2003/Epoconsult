@@ -73,7 +73,7 @@ header .container .title {
     top: 50%;
     transform: translate(-50%, -50%);
     color: var(--clr-white);
-    font-size: clamp(1.30rem, 2.5vw, 50px);
+    font-size: var(--fontsize-title);
 }
 
 header .menu>li>a {

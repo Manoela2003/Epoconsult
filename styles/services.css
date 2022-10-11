@@ -2,7 +2,7 @@
 
 :root {
     --fontsize-title: clamp(1.6rem, 2.75vw, 3.5rem);
-    --fontsize-subtitle: clamp(1.25rem, 1.75vw, 2.5rem);
+    --fontsize-subtitle: clamp(1.3rem, 1.75vw, 2.5rem);
     --fontsize-text: clamp(1.15rem, 1.25vw, 2rem);
     --clr-darkblue: #273F82;
     --clr-blue: #5375CF;
@@ -22,7 +22,7 @@ body {
 
 /* HEADER */
 
-header .back-to-top{
+header .back-to-top {
     position: fixed;
     bottom: 0rem;
     right: 2rem;
@@ -32,12 +32,20 @@ header .back-to-top{
     font-size: 3rem;
     color: var(--clr-sandy);
     z-index: 100;
+    background-color: black;
+    border-radius: 50%;
+    -webkit-box-shadow: 9px 7px 23px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 9px 7px 23px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 9px 7px 23px -4px rgba(0, 0, 0, 0.75);
 }
-header .back-to-top.active{
+
+
+header .back-to-top.active {
     bottom: 2rem;
     opacity: 1;
     pointer-events: auto;
 }
+
 header .container {
     height: clamp(300px, 60vh, 450px);
     margin: 0 auto;
@@ -94,7 +102,7 @@ header .container .title {
     top: 50%;
     transform: translate(-50%, -50%);
     color: var(--clr-white);
-    font-size: clamp(1.30rem, 2.5vw, 50px);
+    font-size: var(--fontsize-title);
 }
 
 header .menu>li>a {
@@ -572,6 +580,11 @@ footer .copyright {
 }
 
 @media(max-width: 1450px) {
+    .main-texts .services .text img {
+        width: 170px;
+        height: 170px;
+    }
+
     footer .card {
         left: 3rem;
     }
@@ -623,6 +636,11 @@ footer .copyright {
 }
 
 @media(max-width: 1200px) {
+    .sub-menu .flex .hexagon-wrapper {
+        width: 230px;
+        height: 230px;
+    }
+
     footer .card {
         left: 4rem;
         width: 80%;
@@ -650,6 +668,11 @@ footer .copyright {
 }
 
 @media(max-width: 1000px) {
+    .main-texts .list li::before {
+        content: url(/images/bulletResized.png);
+        margin-right: 0.75rem;
+    }
+
     footer .container {
         flex-direction: column;
     }
@@ -692,6 +715,11 @@ footer .copyright {
 }
 
 @media(max-width: 870px) {
+    .main-texts .services .text img {
+        width: 140px;
+        height: 140px;
+    }
+
     header .menu {
         right: 0.75rem;
     }
@@ -722,6 +750,11 @@ footer .copyright {
 }
 
 @media(max-width: 780px) {
+    .main-texts .additional li::before {
+        content: url(/images/rhombusResize.png);
+        margin-right: 0.75rem;
+    }
+
     footer .sitemap .first-col {
         width: 50%;
     }
@@ -839,7 +872,26 @@ footer .copyright {
     }
 }
 
+@media(max-width: 750px) {
+    .main-texts li {
+        padding: 0 1rem 0.25rem
+    }
+}
+
 @media(max-width: 700px) {
+    .main-texts .services .text {
+        width: 90%;
+    }
+
+    .main-texts .services:nth-child(2) {
+        margin: 3rem 0;
+    }
+
+    .sub-menu .flex .hexagon-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+
     footer .card .divider {
         width: clamp(100px, 48vw, 600px);
     }
@@ -887,6 +939,19 @@ footer .copyright {
 }
 
 @media(max-width: 500px) {
+    .main-texts .list li:not(:last-child)::after {
+        content: none;
+    }
+
+    .main-texts li {
+        margin-bottom: 1rem;
+    }
+
+    .main-texts .services .text img {
+        width: 100px;
+        height: 100px;
+    }
+
     header .menu {
         width: 100%;
         align-items: flex-start;
@@ -915,6 +980,10 @@ footer .copyright {
 }
 
 @media(max-width: 415px) {
+    .main-texts .services .text {
+        width: 95%;
+    }
+
     footer {
         min-height: 900px;
     }
