@@ -66,6 +66,7 @@ header .container .logo {
     z-index: 100;
     object-fit: contain;
     left: 15px;
+    filter: brightness(100%);
 }
 
 header .container .triangle {
