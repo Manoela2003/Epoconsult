@@ -207,12 +207,40 @@ main .currentLaws .more {
     cursor: pointer;
     margin: 1.5rem auto 1.25rem;
     font-size: var(--fontsize-text);
-    background-color: var(--clr-darkblue);
-    color: var(--clr-white);
+    color: black;
     border: none;
     padding: 0.5rem 1.75rem;
     text-decoration: none;
 }
+main .currentLaws .more::before,
+main .currentLaws .more::after{
+    content: '';
+    width: 20%;
+    height: 30%;
+    border: 2px solid var(--clr-darkblue);
+    position: absolute;
+    transition: all 600ms;
+}
+main .currentLaws .more::before{
+    top: 0;
+    left: 0;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+main .currentLaws .more::after{
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+main .currentLaws .more:hover::after,
+main .currentLaws .more:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
 main .currentLaws .main-info{
     position: relative;
 }
