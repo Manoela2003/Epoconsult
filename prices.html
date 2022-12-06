@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цени</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/prices.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="/images/logo.png" alt="Epoconsult logo">
+            <div class="triangle"></div>
+            <nav>
+                <input class="checkbox" type="checkbox">
+                <div class="menu-burger">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menu">
+                    <li><a href="/HTML files/index.html">Начало</a></li>
+                    <li><a href="/HTML files/about.html">За нас</a></li>
+                    <li><a href="/HTML files/services.html">Услуги</a><i class="fa-solid fa-angle-down"></i>
+                        <ul class="dropdown">
+                            <li><a href="/HTML files/gfo.html">ГФО</a></li>
+                            <li><a href="/HTML files/VAT reimbursement.html">Възстановяване на ДДС от ЕС</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="prices" href="#">Цени</a></li>
+                    <li><a href="/HTML files/helpful.html">Полезно</a><i class="fa-solid fa-angle-down"></i>
+                        <ul class="dropdown">
+                            <li><a href="/HTML files/currentLaws.html">Актуално</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/HTML files/contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+            <img src="../images/prices-header.jpg" alt="Displayed coins">
+            <h1 class="title">Цени</h1>
+        </div>
+    </header>
+    <section class="accordion">
+        <ul class="accordion-list">
+            <li>
+                <input type="checkbox" checked>
+                <div class="divider"></div>
+                <h2 class="title">Фирми, регистрирани по ЗДДС</h2>
+                <ul class="text">
+                    <li>
+                        <div class="criteria">малък обем документи (до 200) за финансовата година и 1 банкова сметка
+                        </div>
+                        <div class="price">310 лева на месец</div>
+                    </li>
+                    <li>
+                        <div class="criteria">малък обем документи (до 400) за финансовата година и до 2 банкови сметки
+                        </div>
+                        <div class="price">380 лева на месец</div>
+                    </li>
+                    <li>
+                        <div class="criteria">среден обем документи (до 600) за финансовата година и до 2 банкови сметки
+                        </div>
+                        <div class="price">420 лева на месец</div>
+                    </li>
+                    <li>
+                        <div class="criteria">среден обем документи (до 1000) за финансовата година и до 4 банкови
+                            сметки</div>
+                        <div class="price">500 лева на месец</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" checked>
+                <div class="divider"></div>
+                <h2 class="title">Фирми, нерегистрирани по ЗДДС</h2>
+                <ul class="text">
+                    <li>
+                        <div class="criteria">малък обем документи (до 200) за финансовата година, без банкова сметка,
+                            двустранно счетоводство</div>
+                        <div class="price">100 лева на месец</div>
+                    </li>
+                    <li>
+                        <div class="criteria">малък обем документи (до 400) за финансовата година, 1 банкова сметка,
+                            двустранно счетоводство</div>
+                        <div class="price">150 лева на месец</div>
+                    </li>
+                    <li>
+                        <div class="criteria">среден обем документи (до 600) за финансовата година, до 2 банкови сметки,
+                            двустранно счетоводство</div>
+                        <div class="price">250 лева на месец</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" checked>
+                <div class="divider"></div>
+                <h2 class="title">Фирми с патентна дейност</h2>
+                <ul class="text">
+                    <li>
+                        <div class="criteria">малък обем документи (до 400) за финансовата година, едностранно
+                            счетоводство</div>
+                        <div class="price">80 лева на месец</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" checked>
+                <div class="divider"></div>
+                <h2 class="title">Мениджмънт на работни заплати</h2>
+                <ul class="text">
+                    <li>
+                        <div class="criteria">осигуровки на собственици и съдружници, без персонал, изготвяне на
+                            платежни нареждания, декларация 1 и 6, и представянето им в банката, НОИ и НАП</div>
+                        <div class="price">20 лева на месец</div>
+                    </li>
+                    <li>
+                        <div class="criteria">за персонал <span class="for-staff">(в цената се включва изготвяне на
+                                месечна ведомост за заплати, приложения за болнични, платежни нареждания, декларации 1 и
+                                6 и представянето им в банката, НОИ и НАП. Цената е за 1(един) месец и е
+                                абонаментна)</span>
+                        </div>
+                        <div class="price">20 лева за едно + 15 лева за всяко следващо лице</div>
+                    </li>
+                    <li>
+                        <div class="criteria">заверка на осигурителен стаж на служители за период преди обслужване от
+                            счетоводната кантора</div>
+                        <div class="price">сума по договаряне</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" checked>
+                <div class="divider"></div>
+                <h2 class="title">Еднократни такси</h2>
+                <ul class="text">
+                    <li>
+                        <div class="criteria">междини счетоводни отчети (Баланс, ОПР и ОПП)</div>
+                        <div class="price">30% от месечното възнаграждение</div>
+                    </li>
+                    <li>
+                        <div class="criteria">подготовка на документи за регистрация по ЗДДС, данъчна защита и
+                            представителство по време на предварителния оглед на документите от органите на НАП</div>
+                        <div class="price">250- 500 лева в зависимост от срока и обема на документите</div>
+                    </li>
+                    <li>
+                        <div class="criteria">документи, свързани с изискванията на Инспекция по труда</div>
+                        <div class="price">цена по договаряне в зависимост от дейността на фирмата и числеността на
+                            персонала</div>
+                    </li>
+                    <li>
+                        <div class="criteria">консултации</div>
+                        <div class="price">30 лева на час и по 15 лева за всеки следващ час</div>
+                    </li>
+                    <li>
+                        <div class="criteria">подготовка на документи за банков кредит</div>
+                        <div class="price">цена по договаряне</div>
+                    </li>
+                    <li>
+                        <div class="criteria">анализ на дейността на фирмата</div>
+                        <div class="price">цена по договаряне</div>
+                    </li>
+                    <li>
+                        <div class="criteria">възстановяване на ДДС от страни членки на ЕС</div>
+                        <div class="price">5% от стойността на исканото ДДС, но не по-малко от 50.00 лв на искане</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <div class="addition">
+        <container class="flex">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <div class="text">Определянето на цената на услугите е актуално за 2022 г. Посочените цени подлежат на
+                коментар след запознаване с дейността и документацията на фирмата-клиент.</div>
+        </container>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="block">
+                <div class="card">
+                    <img class="logo" src="/images/logo.png" alt="Epoconsult logo">
+                    <div class="divider"></div>
+                    <p>2600 Дупница, България</p>
+                    <p>ул."Втори Януари" №25</p>
+                    <p>0887 51 41 01</p>
+                    <p>0878 35 25 95</p>
+                    <p>epop@b-trust.org</p>
+                    <a class="facebook" href="https://www.facebook.com/epoconsult/" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="sitemap">
+                <ul class="links">
+                    <div class="first-col">
+                        <h2 class="title">Карта на сайта</h2>
+                        <li><a href="/HTML files/index.html">Начало</a></li>
+                        <li><a href="/HTML files/about.html">За нас</a></li>
+                        <li><a href="/HTML files/services.html">Услуги</a>
+                            <ul class="sub-links">
+                                <li><i class="fa-solid fa-caret-right"></i><a href="/HTML files/gfo.html">ГФО</a></li>
+                                <li><i class="fa-solid fa-caret-right"></i><a href="/HTML files/VAT reimbursement.html">Възстановяване на ДДС от ЕС</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="second-col">
+                        <li><a href="/HTML files/prices.html">Цени</a></li>
+                        <li><a href="/HTML files/helpful.html">Полезно</a>
+                            <ul class="sub-links">
+                                <li><i class="fa-solid fa-caret-right"></i><a href="/HTML files/currentLaws.html">Актуално</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/HTML files/contacts.html">Контакти</a></li>
+                    </div>
+                    <div class="third-col">
+                        <h2 class="title">Контакти</h2>
+                        <li><i class="fa-solid fa-location-dot"></i>ул."Втори Януари" №25, гр. Дупница</li>
+                        <li><i class="fa-solid fa-envelope"></i>epop@b-trust.org</li>
+                        <li><i class="fa-solid fa-phone"></i>0887 51 41 01</li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">&copy; Copyright 2022 - All rights reserved</div>
+    </footer>
+</body>
+
+</html>
