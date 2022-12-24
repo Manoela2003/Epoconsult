@@ -193,7 +193,17 @@ main .currentLaws article {
 main .currentLaws .title {
     font-size: clamp(1.3rem, 1.6vw, 2.5rem);
     text-align: center;
-    padding: 0 0.5rem 1rem;
+    padding: 0 0.5rem 0.5rem;
+    font-weight: 500;
+}
+
+main .currentLaws .divider{
+    background-color: var(--clr-sandy);
+    border: none;
+    display: block;
+    height: 2px;
+    width: 50%;
+    margin-bottom: 0.75rem;
 }
 
 main .currentLaws .text {
@@ -440,7 +450,6 @@ footer .copyright {
 
 @media(max-width: 1450px) {
     main .currentLaws article{
-        /* max-height: 410px; */
         width: 30%;
     }
     main .currentLaws {
