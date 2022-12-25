@@ -207,7 +207,8 @@ main .text-wrapper {
     margin-bottom: 2.5rem;
 }
 
-main .text-wrapper::before, main .text-wrapper::after{
+main .text-wrapper::before,
+main .text-wrapper::after {
     content: '';
     position: absolute;
     bottom: 50%;
@@ -216,12 +217,12 @@ main .text-wrapper::before, main .text-wrapper::after{
     width: 0.5rem;
 }
 
-main .text-wrapper::after{
+main .text-wrapper::after {
     right: -2rem;
     border-right: 10px double var(--clr-darkblue);
 }
 
-main .text-wrapper::before{
+main .text-wrapper::before {
     left: -2rem;
     border-left: 10px double var(--clr-darkblue);
 }
@@ -281,10 +282,25 @@ main .text-info li:nth-child(2) {
     border-bottom: none;
 }
 
-main .text-info li:last-child {
+main .text-info li:nth-child(3) {
     padding: 0.75rem;
     width: 100%;
     background-color: var(--clr-sandy);
+}
+
+main .text-info li:last-child{
+    margin: 0 auto;
+    width: 220px;
+    padding: 0.75rem;
+    border: 10px double var(--clr-darkblue);
+    border-top: none;
+}
+
+main .text-info li:last-child a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-style: italic;
 }
 
 main .btn-wrapper {
@@ -513,9 +529,10 @@ footer .copyright {
 }
 
 @media(max-width: 1300px) {
-    main .text-wrapper .list{
+    main .text-wrapper .list {
         width: 85%;
     }
+
     footer .container {
         column-gap: 4rem;
     }
@@ -573,16 +590,17 @@ footer .copyright {
     }
 }
 
-@media(max-width: 1150px){
-    main .text-wrapper{
+@media(max-width: 1150px) {
+    main .text-wrapper {
         width: 85%;
     }
 }
 
 @media(max-width: 1000px) {
-    main .btn-wrapper{
+    main .btn-wrapper {
         width: 95%;
     }
+
     footer .container {
         flex-direction: column;
     }
@@ -625,9 +643,10 @@ footer .copyright {
 }
 
 @media(max-width: 870px) {
-    main .title{
+    main .title {
         width: 80%;
     }
+
     header .menu {
         right: 0.75rem;
     }
@@ -789,11 +808,12 @@ footer .copyright {
     }
 }
 
-@media(max-width: 620px){
-    main .text-wrapper .list{
+@media(max-width: 620px) {
+    main .text-wrapper .list {
         margin-left: 3.5rem;
     }
-    main .btn-wrapper{
+
+    main .btn-wrapper {
         width: 100%;
         justify-content: center;
     }
@@ -833,13 +853,15 @@ footer .copyright {
 }
 
 @media(max-width: 500px) {
-main .text-wrapper{
-    width: 95%;
-}
+    main .text-wrapper {
+        width: 95%;
+    }
 
-    main .text-wrapper::before, main .text-wrapper::after{
+    main .text-wrapper::before,
+    main .text-wrapper::after {
         display: none;
     }
+
     header .menu {
         width: 100%;
         align-items: flex-start;
@@ -868,9 +890,10 @@ main .text-wrapper{
 }
 
 @media(max-width: 415px) {
-    main .text-info li:nth-child(2){
+    main .text-info li:nth-child(2) {
         width: 85%;
     }
+
     footer {
         min-height: 900px;
     }
@@ -896,9 +919,10 @@ main .text-wrapper{
 }
 
 @media(max-width: 315px) {
-    main .text-wrapper .list{
+    main .text-wrapper .list {
         margin-left: 2.5rem;
     }
+
     footer .card .email i {
         right: 28%;
     }
