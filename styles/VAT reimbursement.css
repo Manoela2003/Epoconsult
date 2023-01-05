@@ -117,7 +117,6 @@ header .menu li a::after {
 
 header .menu li {
     position: relative;
-    display: inline-block;
 }
 
 header .menu li a::before {
@@ -141,6 +140,10 @@ header nav .dropdown {
     padding: 1rem;
     opacity: 0;
     transition: opacity 500ms ease-in-out;
+}
+
+header nav .larger-dropdown{
+    width: 290px;
 }
 
 header nav .dropdown li {
@@ -602,6 +605,9 @@ footer .copyright {
     }
 }
 @media(max-width: 2000px) {
+    header nav .larger-dropdown{
+        width: 270px;
+    }
     .main .deadline .list {
         width: 75%;
     }
@@ -634,6 +640,9 @@ footer .copyright {
 }
 
 @media(max-width: 1700px) {
+    header nav .larger-dropdown{
+        width: 230px;
+    }
     .main .listing-list{
         width: 980px;
     }
@@ -680,6 +689,9 @@ footer .copyright {
 }
 
 @media(max-width: 1450px) {
+    header nav .larger-dropdown{
+        width: 200px;
+    }
     .main .listing-text {
         left: 45%;
     }
@@ -734,6 +746,9 @@ footer .copyright {
 }
 
 @media(max-width: 1300px) {
+    header nav .larger-dropdown{
+        width: 180px;
+    }
     .main .needed {
         max-width: 400px;
     }

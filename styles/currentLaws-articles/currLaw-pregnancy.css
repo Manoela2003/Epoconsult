@@ -118,7 +118,6 @@ header .menu li a::after {
 
 header .menu li {
     position: relative;
-    display: inline-block;
 }
 
 header .menu li a::before {
@@ -142,6 +141,9 @@ header nav .dropdown {
     padding: 1rem;
     opacity: 0;
     transition: opacity 500ms ease-in-out;
+}
+header nav .larger-dropdown{
+    width: 290px;
 }
 
 header nav .dropdown li {
@@ -458,12 +460,18 @@ footer .copyright {
 }
 
 @media(max-width: 2000px) {
+    header nav .larger-dropdown{
+        width: 270px;
+    }
     footer .sitemap {
         width: 65%;
     }
 }
 
 @media(max-width: 1700px) {
+    header nav .larger-dropdown{
+        width: 230px;
+    }
     footer .card .logo {
         margin-right: 2rem;
     }
@@ -484,6 +492,9 @@ footer .copyright {
 }
 
 @media(max-width: 1450px) {
+    header nav .larger-dropdown{
+        width: 200px;
+    }
     footer .card {
         left: 3rem;
     }
@@ -504,6 +515,9 @@ footer .copyright {
 }
 
 @media(max-width: 1300px) {
+    header nav .larger-dropdown{
+        width: 180px;
+    }
     footer .container {
         column-gap: 4rem;
     }
