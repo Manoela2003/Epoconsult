@@ -299,9 +299,11 @@ header .menu .prices::before {
 
 .addition {
     width: 100%;
+    margin-bottom: 2rem;
+}
+
+.addition .wrap{
     background-color: var(--clr-darksandy);
-    height: clamp(100px, 35vh, 150px);
-    margin-bottom: 3rem;
 }
 .addition .flex{
     display: flex;
@@ -311,6 +313,7 @@ header .menu .prices::before {
     height: 100%;
     gap: 2rem;
     justify-content: space-evenly;
+    padding: 1rem 0;
 }
 
 .addition .text {
@@ -321,6 +324,34 @@ header .menu .prices::before {
 .addition i{
     font-size: 6rem;
     color: var(--clr-sandy);
+}
+
+.addition .wrap-bank-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-sandy);
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+}
+
+.addition .bank-info .text{
+    padding: 1rem;
+    color: black;
+}
+
+.addition .bank-info .text li{
+    margin-top: 0.5rem;
+}
+
+.addition .bank-info .sub-title{
+    font-weight: 500;
+}
+
+.addition .bank-info .italic{
+    font-style: italic;
+    text-decoration: underline;
 }
 
 
@@ -604,6 +635,9 @@ footer .copyright {
     .addition i{
         font-size: 4.5rem;
     }
+    .addition .wrap-bank-info{
+        width: 80%;
+    }
 }
 @media(max-width: 1000px){
     .addition .text{
@@ -807,6 +841,12 @@ footer .copyright {
     }
 }
 @media(max-width: 570px) {
+    .addition .wrap-bank-info{
+        width: 100%;
+    }
+    .addition .text{
+        width: 95%;
+    }
     footer .card .divider{
         width: clamp(50px, 45vw, 600px);
     }
@@ -888,9 +928,6 @@ footer .copyright {
     }
 }
 @media(max-width: 375px){
-    .addition{
-        height: clamp(100px, 35vh, 190px);
-    }
     footer .card .divider {
         display: none;
     }
@@ -898,6 +935,9 @@ footer .copyright {
     footer .card i {
         top: 8%;
         right: 10%;
+    }
+    .addition .wrap-bank-info .text{
+        padding: 1rem 0;
     }
 }
 @media(max-width: 350px){
