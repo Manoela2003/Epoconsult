@@ -136,8 +136,9 @@ header nav .dropdown {
     background-color: rgba(239, 239, 240, 0.4);
     border-radius: 15px;
     padding: 1rem;
+    visibility: hidden;
     opacity: 0;
-    transition: opacity 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 header nav .larger-dropdown{
     width: 290px;
@@ -153,7 +154,6 @@ header nav .dropdown li a {
 
 header nav .menu li:hover>ul,
 header nav .menu li:focus>ul {
-    display: block;
     visibility: visible;
     opacity: 1;
 }
@@ -293,6 +293,14 @@ header .menu .prices::before {
 
 .accordion ul li input[type=checkbox]:checked~.divider::after {
     transform: rotate(-90deg);
+}
+
+.accordion .subscription li:first-child{
+    border-top: none;
+    justify-content: flex-end;
+    padding-bottom: 1.5rem;
+    font-style: italic;
+    text-decoration: underline;
 }
 
 /* ADDITION */
