@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/0f780f472a78a2e8cb40eb78/script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Актуално</title>
+    <title>Епоконсулт</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
@@ -14,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/currentLaws.css">
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
                     <span class="line line3"></span>
                 </div>
                 <ul class="menu">
-                    <li><a href="/HTML files/index.html">Начало</a></li>
+                    <li><a class="home" href="/HTML files/index.html">Начало</a></li>
                     <li><a href="/HTML files/about.html">За нас</a></li>
                     <li class="arrow-dropdown"><a href="/HTML files/services.html">Услуги</a><i class="fa-solid fa-angle-down"></i>
                         <ul class="dropdown larger-dropdown">
@@ -43,32 +44,41 @@
                     <li><a href="/HTML files/prices.html">Цени</a></li>
                     <li class="arrow-dropdown smaller-dropdown"><a href="/HTML files/helpful.html">Полезно</a><i class="fa-solid fa-angle-down"></i>
                         <ul class="dropdown">
-                            <li><a class ="current" href="/HTML files/currentLaws.html">Актуално</a></li>
+                            <li><a href="/HTML files/currentLaws.html">Актуално</a></li>
                         </ul>
                     </li>
                     <li><a href="/HTML files/contacts.html">Контакти</a></li>
                 </ul>
             </nav>
-            <img src="../images/current-header.jpg" alt="high buildings facing the sky">
-            <h1 class="title">Актуално</h1>
+            <img src="../images/home-header.jpg" alt="Счетоводителство">
+            <h1 class="title">Начало</h1>
         </div>
     </header>
     <main>
-        <section class="currentLaws">
-            <article class="main-info">
-                <h2 class="title">Актуално за отпуските при бременност, раждане и майчинство</h2>
-                <hr class="divider">
-                <p class="text">Първа стъпка:
-                    Издаване на болничен за бременност и раждане – издава се от гинеколога, който следи бременността, 45 дни преди термина на раждане. Трябва да се открие лична банкова сметка, ако няма такава, на която да се изплащат обезщетенията.
-                    Необходими документи: Болничен за 45 дни; Документ от банка с открита банкова...</p>
-                    <a href="currentLaws-articles/currLaw-pregnancy.html" class="more">Още</a>
-            </article>
-            <article class="main-info">
-                <h2 class="title">Важно за търговските дружества, които не са извършвали дейност през предходния отчетен период</h2>
-                <hr class="divider">
-                <p class="text">Уведомяваме потребителите на информационната система на Търговския регистър и регистъра на юридическите лица с нестопанска цел, че декларация по чл. 38, ал. 9, т. 2 от Закона за счетоводството (ЗСч) може да се представи за обявяване със заявление по образец съгласно...</p>
-                <a href="currentLaws-articles/currLaw-commercialCompanies.html" class="more">Още</a>
-            </article>
+        <section class="introduction">
+            <section class="highlights">
+                <div class="highlight-article">
+                    <h2 class="title">За нас</h2>
+                    <a href="/HTML files/about.html" class="icon"><i class="fa-solid fa-lightbulb"></i></a>
+                    <p class="text">Разберете повече за нашата мисия и приоритети. На кого и как помагаме.</p>
+                    <a href="/HTML files/about.html" class="btn">Научете повече</a>
+                </div>
+                <div class="highlight-article">
+                    <h2 class="title">Нашите услуги</h2>
+                    <a href="/HTML files/services.html" class="icon"><i class="fa-solid fa-handshake-angle"></i></a>
+                    <p class="text">Запознайте се с видовете услуги, които предлагаме - счетоводни, трз и личен състав,
+                        други</p>
+                    <a href="/HTML files/services.html" class="btn">Научете повече</a>
+                </div>
+            </section>
+            <section class="heading">
+                <div class="heading-info">
+                    <h2 class="title">Нуждаете се от коректно и стойностно обслужване?</h2>
+                    <p class="text"> При нас ще получите надеждна информация и индивидуален подход</p>
+                    <a href="/HTML files/contacts.html" class="btn">Свържете се с нас <i
+                            class="fa-solid fa-comments"></i></a>
+                </div>
+            </section>
         </section>
     </main>
     <footer>
