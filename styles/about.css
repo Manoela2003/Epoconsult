@@ -7,7 +7,7 @@
     --clr-darkblue: #273F82;
     --clr-blue: #5375CF;
     --clr-darksandy: #82651A;
-    --clr-sandy: #CFAB53;
+    --clr-sandy: rgb(207, 171, 83);
     --clr-white: rgb(235, 235, 235);
     --gradient: linear-gradient(197deg, rgba(39, 63, 130, 1) 17%, rgba(83, 117, 207, 1) 37%, rgba(130, 101, 26, 1) 60%, rgba(207, 171, 83, 1) 83%);
 }
@@ -59,7 +59,7 @@ header .menu {
     position: absolute;
     top: 0.5rem;
     right: 2rem;
-    z-index: 1;
+    z-index: 100;
     display: flex;
     align-items: center;
     width: 50%;
@@ -136,14 +136,15 @@ header nav .dropdown {
     left: -1rem;
     z-index: 100;
     box-shadow: 0 0 10px gray;
-    background-color: rgba(239, 239, 240, 0.4);
+    background-color: rgba(116, 116, 116, 0.85);
     border-radius: 15px;
     padding: 1rem;
     visibility: hidden;
     opacity: 0;
-    transition: all 500ms ease-in-out;
+    transition: max-height 250ms ease-in, visibility 250ms ease-in, opacity 250ms ease-in;
 }
-header nav .larger-dropdown{
+
+header nav .larger-dropdown {
     width: 290px;
 }
 
@@ -154,6 +155,7 @@ header nav .dropdown li {
 header nav .dropdown li a {
     text-decoration: none;
     color: var(--clr-white);
+    transition: color 300ms ease-in;
 }
 
 header nav .menu li:hover>ul,
@@ -164,7 +166,6 @@ header nav .menu li:focus>ul {
 
 header nav .menu li ul li a:hover {
     color: var(--clr-sandy);
-    transition: color 200ms ease-in;
 }
 
 header .menu .about-us::after,
@@ -464,7 +465,7 @@ footer .card {
     display: inline-block;
     background-color: var(--clr-darksandy);
     position: relative;
-    top: -3rem;
+    top: 1rem;
     left: 7rem;
     border-radius: 1rem;
     padding-bottom: 1rem;
@@ -500,7 +501,8 @@ footer .card i {
     right: 1rem;
     color: var(--clr-darkblue);
 }
-footer .card .email i{
+
+footer .card .email i {
     right: 3.75rem;
 }
 
@@ -606,18 +608,20 @@ footer .copyright {
 }
 
 @media(max-width: 2000px) {
-    header nav .larger-dropdown{
+    header nav .larger-dropdown {
         width: 270px;
     }
+
     footer .sitemap {
         width: 65%;
     }
 }
 
 @media(max-width: 1700px) {
-    header nav .larger-dropdown{
+    header nav .larger-dropdown {
         width: 230px;
     }
+
     .mission .our-mission {
         margin-left: -100px;
         min-height: 400px;
@@ -674,9 +678,10 @@ footer .copyright {
 }
 
 @media (max-width: 1450px) {
-    header nav .larger-dropdown{
+    header nav .larger-dropdown {
         width: 200px;
     }
+
     .mission .our-motto .title {
         padding-top: 0;
     }
@@ -716,9 +721,10 @@ footer .copyright {
 }
 
 @media(max-width: 1300px) {
-    header nav .larger-dropdown{
+    header nav .larger-dropdown {
         width: 180px;
     }
+
     footer .container {
         column-gap: 4rem;
     }
@@ -733,12 +739,13 @@ footer .copyright {
 
     footer .card {
         left: 7rem;
-        top: -5rem;
     }
-    footer .card .logo{
+
+    footer .card .logo {
         margin-left: 1.5rem;
     }
-    footer .card p{
+
+    footer .card p {
         padding-left: 1.5rem;
     }
 
@@ -874,6 +881,10 @@ footer .copyright {
         margin: 3.5rem auto;
     }
 
+    .who-and-how i{
+        font-size: 9.25em;
+    }
+
     .mission-wrapper .background {
         display: none;
     }
@@ -974,8 +985,9 @@ footer .copyright {
         transform: translateX(-50%);
     }
 }
-@media(max-width: 800px){
-    .team .title{
+
+@media(max-width: 800px) {
+    .team .title {
         grid-column: 1 / span 4;
     }
 }
@@ -990,40 +1002,37 @@ footer .copyright {
     }
 }
 
-@media(max-width: 767px) {
+@media(max-width: 768px) {
     header .menu {
+        position: absolute;
+        visibility: hidden;
         flex-direction: column;
-        gap: 1.5rem;
         align-items: stretch;
         top: -1.25rem;
         right: 0;
         min-width: unset;
         width: 380px;
         background-color: var(--clr-darksandy);
-        padding: 1rem 0;
+        padding: 3rem 0 0;
         opacity: 0;
-        transition: opacity 500ms ease;
+        transition: all 500ms ease;
         z-index: 105;
         border-radius: 5px;
-    }
-
-    header .menu .checkbox {
-        position: absolute;
-        right: 0.75rem;
-        top: 6.35rem;
-        width: 1.75rem;
-        height: 1.5rem;
     }
 
     header .menu li {
         text-align: center;
         font-size: 1.45rem;
+        border-top: solid 1px rgb(200, 200, 200);
+        padding: 0.75rem 0;
+        position: static;
+        transition: background-color 300ms ease-in;
     }
 
     header .checkbox {
         display: block;
         position: absolute;
-        right: 27px;
+        right: 1.15rem;
         top: 1rem;
         width: 35px;
         height: 23px;
@@ -1046,7 +1055,7 @@ footer .copyright {
         position: absolute;
         z-index: 100;
         border-radius: 1.5rem;
-        right: 30px;
+        right: 1.25rem;
         top: 1rem;
         transition: all 350ms ease;
     }
@@ -1057,14 +1066,6 @@ footer .copyright {
 
     header .menu-burger .line3 {
         top: 2.2rem;
-    }
-
-    header .menu .dropdown {
-        all: unset;
-        position: static;
-        display: flex;
-        flex-direction: column;
-        padding-top: 1rem;
     }
 
     header nav .menu li ul li a {
@@ -1094,7 +1095,79 @@ footer .copyright {
     }
 
     header .checkbox:checked~.menu {
+        visibility: visible;
         opacity: 1;
+    }
+
+    header .menu .dropdown {
+        position: relative;
+        max-height: 0;
+        padding: unset;
+        width: 100%;
+        top: unset;
+        left: unset;
+        transition: unset;
+        transition: max-height 250ms ease-in;
+    }
+
+    header .menu li:hover {
+        background-color: var(--clr-sandy);
+    }
+
+    header .menu li:hover a,
+    header .menu li:hover .fa-angle-down {
+        color: black;
+        transition: color 400ms ease-in;
+    }
+
+    header .menu li a::after,
+    header .menu li a::before {
+        display: none;
+    }
+
+    header .menu .about-us {
+        color: black;
+    }
+
+    header .menu .fa-angle-down {
+        position: absolute;
+        right: 1.5rem;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    header nav .menu li:hover>ul,
+    header nav .menu li:focus>ul {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    header .menu .clicked {
+        max-height: 300px;
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        top: unset;
+        left: unset;
+        width: 100%;
+        box-shadow: none;
+        border-radius: unset;
+        padding: 0;
+        transition: visibility 400ms ease-in, opacity 400ms ease-in;
+        background-color: var(--clr-sandy);
+        margin-top: 0.75rem;
+    }
+
+    header .menu .clicked a {
+        color: black;
+    }
+
+    header .menu .dropdown li:hover {
+        background-color: var(--clr-darksandy);
+    }
+
+    header .menu .dropdown li:hover a {
+        color: white;
     }
 }
 
@@ -1125,7 +1198,7 @@ footer .copyright {
     }
 
     .who-and-how i {
-        font-size: 10rem;
+        font-size: 7.75rem;
     }
 
     .mission .our-priorities {
@@ -1177,9 +1250,10 @@ footer .copyright {
 }
 
 @media(max-width: 570px) {
-    .team .contact-us{
+    .team .contact-us {
         grid-column: 6 / span 3;
     }
+
     footer .card .divider {
         width: clamp(50px, 45vw, 600px);
     }
@@ -1215,12 +1289,6 @@ footer .copyright {
 @media (max-width: 500px) {
     header .menu {
         width: 100%;
-        align-items: flex-start;
-    }
-
-    header .menu li {
-        text-align: left;
-        margin-left: 1rem;
     }
 
     .mission .our-mission .divider::after {
@@ -1229,8 +1297,9 @@ footer .copyright {
         height: 70px;
     }
 
-    .who-and-how i {
-        font-size: 9rem;
+    .who-and-how {
+        row-gap: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .mission .our-motto {
@@ -1295,6 +1364,9 @@ footer .copyright {
 }
 
 @media(max-width: 375px) {
+    header .container .title{
+        bottom: 1.7rem;
+    }
     .team .contact-us {
         padding: 0.5rem;
     }
@@ -1311,7 +1383,8 @@ footer .copyright {
         top: 10%;
         right: 10%;
     }
-    footer .card .email i{
+
+    footer .card .email i {
         right: 25%;
     }
 }
@@ -1332,7 +1405,8 @@ footer .copyright {
     .team .contact-us {
         grid-column: 5 / span 3;
     }
-    footer .card .email i{
+
+    footer .card .email i {
         right: 28%;
     }
 }
