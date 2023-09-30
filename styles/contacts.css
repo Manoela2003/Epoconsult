@@ -678,17 +678,6 @@ footer .copyright {
         top: 2.2rem;
     }
 
-    header .menu .dropdown {
-        position: relative;
-        max-height: 0;
-        padding: unset;
-        width: 100%;
-        top: unset;
-        left: unset;
-        transition: unset;
-        transition: max-height 250ms ease-in;
-    }
-
     header nav .menu li ul li a {
         color: rgb(223, 223, 223);
         font-size: 1.25rem;
@@ -718,6 +707,17 @@ footer .copyright {
     header .checkbox:checked~.menu {
         visibility: visible;
         opacity: 1;
+    }
+
+    header .menu .dropdown {
+        position: relative;
+        max-height: 0;
+        padding: unset;
+        width: 100%;
+        top: unset;
+        left: unset;
+        transition: unset;
+        transition: max-height 250ms ease-in;
     }
 
     header .menu li:hover {
